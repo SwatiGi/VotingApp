@@ -42,20 +42,20 @@ const deleteVote = (id) => {
     <div>
       <h1>Class Monitor Vote</h1>
 
-      <label>Student Name:</label>
+     <div className='input-contianer'> <label>Student Name:</label>
       <input type="text" ref={inputRef} />
-
-      <select id="candidate-select">
+<div className='select-btn-container'> <select id="candidate-select">
         <option value="suresh">Suresh</option>
         <option value="deepak">Deepak</option>
         <option value="abhik">Abhik</option>
       </select>
 
-      <button onClick={handleClick}>Vote</button>
+      <button onClick={handleClick} className='vote-btn'>Vote</button></div>
+     </div>
 
-      <p>Total votes: {votes.length}</p>
+      <p className='vote-count'>Total votes: {votes.length}</p>
       <hr />
-
+ <div className='contianer'>
       <div>
         <h2>Suresh</h2>
         <p>Total:- {countVotes('suresh')}</p>
@@ -72,7 +72,7 @@ const deleteVote = (id) => {
         <h2>Abhik</h2>
         <p>Total:- {countVotes('abhik')}</p>
         <ul>{votersFor('abhik')}</ul>
-      </div>
+      </div></div>
     </div>
   );
 };
